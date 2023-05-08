@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  background-color: black;
+  font-family: fantasy;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.GameContainer {
+  width: 100%;
+  height: 100vh;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.GameCanvas {
+  width: 70%;
+  height: 100%;
+  background-color: green;
+  float: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Ui {
+  width: 30%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.UiMap {
+  height: 30%;
+  background-color: #eee;
+  position: relative;
+}
+
+.UiInnateConsumables {
+  height: 10%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.UiHealth {
+  height: 100%;
+  width: 50%;
+  background-color: red;
+  text-align: center;
+  padding: 2em;
+}
+
+.UiMana {
+  height: 100%;
+  width: 50%;
+  background-color: cyan;
+  text-align: center;
+  padding: 2em;
+}
+
+.UiSwappable {
+  height: 50%;
+  background-color: #ccc;
+}
+
+.Inventory {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.InventorySlot {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.InventorySlot:hover {
+  background-color: yellow;
+}
+
+.UiMenu {
+  height: 10%;
+  background-color: #aaa;
+  display: flex;
+}
+
+.UiMenuItem {
+  background-color: blue;
   color: white;
+  font-size: 1.5em;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.UiMenuItem:hover {
+  background-color: yellow;
 }
