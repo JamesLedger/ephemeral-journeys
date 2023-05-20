@@ -1,5 +1,5 @@
-import React from "react"
-import { Canvas } from "@react-three/fiber"
+import React, { useRef } from "react"
+import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { CameraControls, Stage } from "@react-three/drei"
 import styled from "styled-components"
 import GLTFModel from "./Helpers/GlbLoader"

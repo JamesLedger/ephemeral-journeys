@@ -13,15 +13,23 @@ const StatsWrapper = styled.div`
 const HealthWrapper = styled.div`
   width: 200px;
   height: 100%;
-  background-color: red;
+  background-color: darkred;
   padding: 10px;
+  font-size: 2em;
+  color: white;
+  border: solid;
+  border-color: red;
 `
 
 const ManaWrapper = styled.div`
   width: 200px;
   height: 100%;
-  background-color: blue;
+  background-color: darkblue;
   padding: 10px;
+  font-size: 2em;
+  color: white;
+  border: solid;
+  border-color: blue;
 `
 
 const Stats = () => {

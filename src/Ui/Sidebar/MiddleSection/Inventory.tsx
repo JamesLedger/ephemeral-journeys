@@ -17,8 +17,12 @@ const InventoryItemStyle = styled.div`
   background-color: green;
   width: 80px;
   height: 11vh;
+  border: solid;
+  border-color: darkgreen;
+
   &:hover {
     background-color: lightgreen;
+    cursor: pointer;
   }
 `
 
