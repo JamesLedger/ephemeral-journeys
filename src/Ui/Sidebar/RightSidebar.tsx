@@ -1,19 +1,37 @@
-import React from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { useState } from "react"
+import { styled } from "styled-components"
 
-const RightSidebar = () => {
+import Stats from "./Stats"
+import Inventory from "./MiddleSection/Inventory"
+import SettingsBar from "./Settings"
+import Quests from "./MiddleSection/Quests"
+import Armour from "./MiddleSection/Armour"
+
+const SidebarWrapper = styled.div`
+  width: 400px;
+  height: 90vh;
+  background: #8d775f;
+`
+
+type MiddleSidebarOption = "inventory" | "quests" | "armour"
+
+const RightSidebar: React.FC = () => {
+  const [middleSidebarOption, setMiddleSidebarOption] =
+    useState<MiddleSidebarOption>("inventory")
+
+  const handleOptionChange = (option: MiddleSidebarOption) => {
+    setMiddleSidebarOption(option)
+  }
+
   return (
-    <div style={{ width: '50%', height: '100%', float: 'left' }}>
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <mesh>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="blue" />
-        </mesh>
-      </Canvas>
-    </div>
-  );
-};
+    <SidebarWrapper>
+      <Stats />
+      {middleSidebarOption === "inventory" && <Inventory />}
+      {middleSidebarOption === "quests" && <Quests />}
+      {middleSidebarOption === "armour" && <Armour />}
+      <SettingsBar />
+    </SidebarWrapper>
+  )
+}
 
-export default RightSidebar;
+export default RightSidebar

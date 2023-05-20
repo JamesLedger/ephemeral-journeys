@@ -1,0 +1,10 @@
+[
+  {
+    "itemId": 0,
+    "internalName": "health_drink",
+    "name": "Health Drink",
+    "examine": "It's fizzy!",
+    "weight": "0.33",
+    "meshPath": ""
+  }
+]
